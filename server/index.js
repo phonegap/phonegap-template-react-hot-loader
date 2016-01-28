@@ -15,7 +15,7 @@ app.get('/', (req, res) => res.render('index', getStep()));
 app.get('/step', (req, res) => res.json(getStep()));
 app.post('/step/:step', (req, res) => {
 	step = req.params.step;
-	res.render('index', getStep());
+	res.redirect('/');
 });
 
 app.listen(3000, () => {
