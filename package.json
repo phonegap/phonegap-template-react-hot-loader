@@ -16,12 +16,17 @@
   "devDependencies": {
     "babel-preset-react-hmre": "^1.0.1",
     "css-loader": "^0.23.1",
+    "replace": "^0.3.0",
     "style-loader": "^0.13.0",
     "webpack-merge": "^0.7.3"
   },
   "scripts": {
+	"android": "cordova run android",
     "build": "webpack",
-    "start": "webpack-dev-server",
+	"ios": "cordova run ios",
+	"prepare": "node config && webpack && cordova prepare",
+	"compile": "node config && webpack && cordova build",
+    "start": "node config && webpack-dev-server",
     "test": "echo \"No tests (yet!) -- submit a PR?\" && exit 0"
   },
   "author": "Jed Watson",

@@ -2,13 +2,13 @@ const merge = require('webpack-merge');
 const path = require('path');
 const webpack = require('webpack');
 
-const TARGET = process.env.npm_lifecycle_event;
+const ENV = require('./env');
 const PATHS = {
 	app: path.join(__dirname, 'app'),
 	build: path.join(__dirname, 'www'),
 };
 
-process.env.BABEL_ENV = TARGET;
+process.env.BABEL_ENV = ENV;
 
 const common = {
 	entry: PATHS.app,
@@ -32,7 +32,7 @@ const common = {
 	}
 };
 
-if (TARGET === 'start' || !TARGET) {
+if (ENV === 'development') {
 	module.exports = merge(common, {
 		devServer: {
 			contentBase: PATHS.build,
@@ -50,14 +50,13 @@ if (TARGET === 'start' || !TARGET) {
 
 			// Parse host and port from env so this is easy to customize.
 			host: process.env.HOST,
-			port: process.env.PORT
+			port: process.env.PORT,
 		},
 		plugins: [
-			new webpack.HotModuleReplacementPlugin()
+			new webpack.HotModuleReplacementPlugin(),
 		],
 	});
-}
-
-if (TARGET === 'build') {
+} else {
+	// config can be added here for minifying / etc
 	module.exports = merge(common, {});
 }

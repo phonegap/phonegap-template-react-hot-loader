@@ -14,3 +14,7 @@ body {
     padding: 0px;
     width: 100%;
 }
+
+#app {
+	margin-top: 80px;
+}
