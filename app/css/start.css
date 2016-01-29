@@ -27,7 +27,7 @@
 	transition: all .1s ease-in;
 }
 
-.start .button-getstarted:active {
+.start .button-getstarted.Tappable-active {
 	box-shadow: 0 0 5px rgba(0,0,0,0.3);
 	opacity: 0.9;
 	transform: scale(0.98, 0.98);
