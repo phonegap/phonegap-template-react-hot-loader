@@ -5,9 +5,8 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: url(http://lorempixel.com/1334/750/) no-repeat center center fixed;
-	-webkit-background-size: cover;
-	background-size: cover;
+	background: url('/images/start.png') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .start .button-getstarted {

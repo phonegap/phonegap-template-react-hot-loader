@@ -1,4 +1,5 @@
 import React from 'react';
+import Tappable from 'react-tappable';
 
 import '../css/start.css';
 
@@ -12,13 +13,10 @@ const Start = React.createClass({
 	render: function() {
 		return (
 			<div className='start'>
-				<input
-					name='start'
-					type='button'
-					value='Get Started'
+				<Tappable
 					className='button-getstarted'
-					onClick={this.start}
-				/>
+					onTap={this.start}
+				>Get Started</Tappable>
 			</div>
 		);
 	},

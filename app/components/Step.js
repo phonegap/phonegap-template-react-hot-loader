@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import Tappable from 'react-tappable';
 
 import '../css/step.css';
 
@@ -14,16 +15,22 @@ const Step = React.createClass({
 		StepStore.prev();
 	},
 	render: function() {
-		const { currentStep, availableSteps } = this.props;
+		const { currentStep, availableSteps, totalSteps } = this.props;
 		const nextClass = classNames({
 			'button': true,
 			'button-next': true,
 			'button-disabled': currentStep >= availableSteps,
+      'hidden': currentStep === totalSteps
 		});
+    console.log(currentStep);
 		return (
-			<div className='step'>
-				<a href='#' className='button button-previous' onClick={this.prev}>&#9650;</a>
-				<a href='#' className={nextClass} onClick={this.next}>&#9660;</a>
+			<div className='step'
+          style={{
+            background:
+            `url(/images/step-${currentStep}.jpg) no-repeat center center fixed; background-size: cover;`
+          }}>
+				<Tappable className='button button-previous' onTap={this.prev}/>
+				<Tappable className={nextClass} onTap={this.next}/>
 			</div>
 		);
 	}

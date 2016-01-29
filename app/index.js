@@ -2,6 +2,7 @@ import './css/main.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CSSTransitionGroup from 'react-addons-css-transition-group';
 
 import StepStore from './stores/step';
 
@@ -24,16 +25,21 @@ const App = React.createClass({
 	renderCurrentStep () {
 		const { currentStep, availableSteps, totalSteps } = this.state;
 		return currentStep === 0
-			? <Start />
+			? <Start key="start" />
 			: <Step
+        key={'step-' + currentStep}
 				currentStep={currentStep}
 				availableSteps={availableSteps}
 				totalSteps={totalSteps} />;
 	},
 	render () {
+    const { direction } = this.state;
 		return (
 			<div>
+        <CSSTransitionGroup transitionName={direction === 'next' ? 'step' : 'step-prev'}
+            transitionEnterTimeout={500} transitionLeaveTimeout={500}>
 				{this.renderCurrentStep()}
+        </CSSTransitionGroup>
 			</div>
 		);
 	},

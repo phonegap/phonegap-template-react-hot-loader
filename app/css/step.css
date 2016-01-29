@@ -4,8 +4,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background: url(http://lorempixel.com/1334/750/) no-repeat center center fixed;
-	-webkit-background-size: cover;
+	background: url(/images/start.png) no-repeat center center fixed;
 	background-size: cover;
 }
 
@@ -17,25 +16,92 @@
 	left: 0;
 	border-radius: 2px;
 	outline: none;
-	background: #448aff;
+	background: #000000;
 	color: #ffffff;
 	box-shadow: 0 0 3px rgba(0,0,0,0.3);
 	padding: 10px;
 	text-decoration: none;
 	text-align: center;
 	font-size: 120%;
+  height: 18px;
 }
 
 .step .button-previous {
 	top: 0;
 }
 
+.step .button-previous:after {
+  content: '\25b2';
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
 .step .button-next {
 	bottom: 0;
 }
 
+.step .button-next:after {
+  content: '\25bc';
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
 .step .button-disabled {
+  -webkit-backdrop-filter: blur(40px);
 	background: rgba(255,255,255,0.3);
 	cursor: default;
 	opacity: 0.8;
+}
+
+.step .button.hidden {
+  display: none;
+}
+
+.step .button-disabled:after {
+  content: '\2588';
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.step .button.Tappable-active {
+	background: #222222;
+	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.step .button-disabled.Tappable-active {
+	background: rgba(255,255,255,0.3);
+}
+
+.step-prev-enter,
+.step-enter {
+  transform: scale(0.9, 0.9);
+  opacity: 0.01;
+}
+
+.step-prev-enter.step-prev-enter-active,
+.step-enter.step-enter-active {
+  transform: scale(1, 1);
+  opacity: 1;
+  transition: all .5s ease-out;
+}
+
+.step-prev-leave,
+.step-leave {
+  transform: scale(1, 1);
+  opacity: 1;
+  transition: all .5s ease-out;
+}
+
+.step-prev-leave.step-prev-leave-active,
+.step-leave.step-leave-active {
+  transform: translate(0, -100%);
+  opacity: 0.01;
+}
+
+.step-prev-leave.step-prev-leave-active {
+  transform: translate(0, 100%);
+  opacity: 0.01;
 }
