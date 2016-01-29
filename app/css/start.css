@@ -1,6 +1,6 @@
 .start {
-	background-size: cover;
 	background: url('/images/start.png') no-repeat center center fixed;
+	background-size: cover;
 	bottom: 0;
 	left: 0;
 	position: absolute;
