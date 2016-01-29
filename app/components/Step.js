@@ -1,3 +1,4 @@
+import classNames from 'classnames';
 import React from 'react';
 
 import '../css/step.css';
@@ -13,10 +14,16 @@ const Step = React.createClass({
 		StepStore.prev();
 	},
 	render: function() {
+		const { currentStep, availableSteps } = this.props;
+		const nextClass = classNames({
+			'button': true,
+			'button-next': true,
+			'button-disabled': currentStep >= availableSteps,
+		});
 		return (
 			<div className='step'>
 				<a href='#' className='button button-previous' onClick={this.prev}>&#9650;</a>
-				<a href='#' className='button button-next' onClick={this.next}>&#9660;</a>
+				<a href='#' className={nextClass} onClick={this.next}>&#9660;</a>
 			</div>
 		);
 	}

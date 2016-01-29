@@ -19,7 +19,6 @@ const App = React.createClass({
 		StepStore.removeChangeListener(this.updateStateFromStore);
 	},
 	updateStateFromStore () {
-		console.log('-- NEW STATE: ', StepStore.getState());
 		this.setState(StepStore.getState());
 	},
 	renderCurrentStep () {
