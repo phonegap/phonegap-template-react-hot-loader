@@ -41,7 +41,8 @@ StepStore.extend({
 		fetchAvailableStep((err, response, data) => {
 			try {
 				data = JSON.parse(data);
-				const newStep = data.step || 1;
+				console.log(data);
+				const newStep = data.availableSteps || 1;
 				this.setCurrentStep(newStep);
 			} catch(e) {
 				console.error('Error: unable to load status data from the API', err, response);

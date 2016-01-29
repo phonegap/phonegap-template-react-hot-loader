@@ -6,9 +6,9 @@ const fs = require('fs');
 
 const constants = require('../constants');
 
-let _currentStep = 1;
+let _availableSteps = 1;
 const getState = () => { return {
-	currentStep: _currentStep,
+	availableSteps: _availableSteps,
 	totalSteps: constants.TOTAL_STEPS,
 }; };
 
@@ -20,7 +20,7 @@ app.use(express.static('server/public'));
 app.get('/', (req, res) => res.render('index', getState()));
 app.get('/step', (req, res) => res.json(getState()));
 app.post('/step/:step', (req, res) => {
-	_currentStep = req.params.step;
+	_availableSteps = req.params.step;
 	res.redirect('/');
 });
 
