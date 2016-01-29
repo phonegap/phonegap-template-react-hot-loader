@@ -1,0 +1,35 @@
+.step {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(http://lorempixel.com/1334/750/) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.step .button {
+  position: absolute;
+  top: auto;
+  bottom: auto;
+  right: 0;
+  left: 0;
+  border-radius: 2px;
+  outline: none;
+  background: #448aff;
+  color: #ffffff;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  padding: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-size: 120%;
+}
+
+.step .button.button-previous {
+  top: 0;
+}
+
+.step .button-next {
+  bottom: 0;
+}

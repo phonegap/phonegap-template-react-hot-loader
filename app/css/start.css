@@ -1,0 +1,38 @@
+
+.start {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url(http://lorempixel.com/1334/750/) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+.start .button-getstarted {
+  position: absolute;
+  bottom: 20px;
+  right: 50%;
+  -webkit-transform: translate(50%,0);
+  transform: translate(50%,0);
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  background: #448aff;
+  color: #ffffff;
+  box-shadow: 0 0 3px rgba(0,0,0,0.3);
+  padding: 10px;
+  width: 300px;
+  font-size: 120%;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+.start .button-getstarted:active {
+  background: #2196f3;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
