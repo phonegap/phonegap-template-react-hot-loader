@@ -17,7 +17,16 @@ const fetchAvailableStep = (callback) => {
 		headers: {
 			'Content-Type': 'application/json',
 		},
-	}, callback);
+	}, (err, response, data) => {
+		try {
+			data = JSON.parse(data);
+			const newStep = data.availableSteps || 1;
+			callback(null, newStep);
+		} catch(e) {
+			console.error('Error: unable to load status data from the API', err, response);
+			callback(err);
+		}
+	});
 }
 
 StepStore.extend({
@@ -42,14 +51,8 @@ StepStore.extend({
 	update () {
 		clearTimeout(window.updateTimeout);
 		let lastCurrentStep = _currentStep;
-		fetchAvailableStep((err, response, data) => {
-			try {
-				data = JSON.parse(data);
-				const newStep = data.availableSteps || 1;
-				this.setCurrentStep(newStep);
-			} catch(e) {
-				console.error('Error: unable to load status data from the API', err, response);
-			}
+		fetchAvailableStep((err, newStep) => {
+			if (!err) this.setCurrentStep(newStep);
 			window.updateTimeout = setTimeout(() => StepStore.update(), 1000);
 		});
 	},
