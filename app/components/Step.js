@@ -23,7 +23,7 @@ const Step = React.createClass({
 			'hidden': currentStep === totalSteps
 		});
 		const style = {
-			backgroundImage: `url(/images/step-${currentStep}.jpg)`,
+			backgroundImage: `url('images/step-${currentStep}.jpg')`,
 		};
 		return (
 			<div className='step' style={style}>

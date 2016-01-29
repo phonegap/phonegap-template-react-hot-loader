@@ -20,12 +20,12 @@ const common = {
 		loaders: [
 			{
 				test: /\.css$/,
-				loaders: ['style', 'css'],
+				loaders: ['style', 'css?url=false'],
 				include: PATHS.app,
 			},
 			{
 				test: /\.jsx?$/,
-				loaders: ['babel?cacheDirectory'],
+				loader: 'babel?cacheDirectory',
 				include: PATHS.app,
 			}
 		]
