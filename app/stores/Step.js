@@ -2,12 +2,13 @@
 
 const Store = require('store-prototype');
 const xhr = require('xhr');
+const constants = require('../../constants');
 
 const StepStore = new Store();
 
 let _currentStep = 0;
-let _availableSteps = 2;
-let _totalSteps = 4;
+let _availableSteps = 1;
+let _totalSteps = constants.TOTAL_STEPS;
 
 const fetchAvailableStep = (callback) => {
 	xhr({
