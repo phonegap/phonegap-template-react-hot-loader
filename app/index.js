@@ -1,18 +1,26 @@
 import './css/main.css';
 
-const React = require('react');
-const ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+import StepStore from './stores/step';
 
 import Start from './components/Start';
 import Step from './components/Step';
 
 const App = React.createClass({
 	getInitialState () {
-		return {
-			currentStep: 0,
-			availableSteps: 2,
-			totalSteps: 4,
-		};
+		return StepStore.getState();
+	},
+	componentWillMount () {
+		StepStore.addChangeListener(this.updateStateFromStore);
+	},
+	componentWillUnmount () {
+		StepStore.removeChangeListener(this.updateStateFromStore);
+	},
+	updateStateFromStore () {
+		console.log('-- NEW STATE: ', StepStore.getState());
+		this.setState(StepStore.getState());
 	},
 	renderCurrentStep () {
 		const { currentStep, availableSteps, totalSteps } = this.state;
