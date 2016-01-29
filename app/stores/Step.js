@@ -26,17 +26,17 @@ StepStore.extend({
 			currentStep: _currentStep,
 			availableSteps: _availableSteps,
 			totalSteps: _totalSteps,
-      direction: _direction,
+			direction: _direction,
 		};
 	},
 	next () {
 		_currentStep = Math.min(_currentStep + 1, _availableSteps);
-    _direction = 'next';
+		_direction = 'next';
 		this.notifyChange();
 	},
 	prev () {
 		_currentStep = Math.max(_currentStep - 1, 0);
-    _direction = 'prev';
+		_direction = 'prev';
 		this.notifyChange();
 	},
 	update () {
@@ -45,7 +45,6 @@ StepStore.extend({
 		fetchAvailableStep((err, response, data) => {
 			try {
 				data = JSON.parse(data);
-				console.log(data);
 				const newStep = data.availableSteps || 1;
 				this.setCurrentStep(newStep);
 			} catch(e) {
@@ -62,7 +61,7 @@ StepStore.extend({
 		}
 		if (_currentStep > _availableSteps) {
 			_currentStep = _availableSteps;
-      _direction = 'prev';
+			_direction = 'prev';
 			changed = true;
 		}
 		if (changed) {

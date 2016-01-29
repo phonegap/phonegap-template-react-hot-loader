@@ -13,10 +13,9 @@ const Start = React.createClass({
 	render: function() {
 		return (
 			<div className='start'>
-				<Tappable
-					className='button-getstarted'
-					onTap={this.start}
-				>Get Started</Tappable>
+				<Tappable className='button-getstarted' onTap={this.start}>
+					Get Started
+				</Tappable>
 			</div>
 		);
 	},

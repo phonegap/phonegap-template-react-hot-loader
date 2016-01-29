@@ -1,37 +1,34 @@
-
 .start {
-	position: absolute;
-	top: 20px;
-	right: 0;
+	background-size: cover;
+	background: url('/images/start.png') no-repeat center center fixed;
 	bottom: 0;
 	left: 0;
-	background: url('/images/start.png') no-repeat center center fixed;
-  background-size: cover;
+	position: absolute;
+	right: 0;
+	top: 20px;
 }
 
 .start .button-getstarted {
-	position: absolute;
-	bottom: 20px;
-	right: 50%;
-	-webkit-transform: translate(50%,0);
-	transform: translate(50%,0);
 	-webkit-appearance: none;
-	outline: none;
-	border: none;
+	background: white;
 	border-radius: 2px;
-	outline: none;
-	background: #448aff;
-	color: #ffffff;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
 	box-shadow: 0 0 3px rgba(0,0,0,0.3);
-	padding: 10px;
-	width: 300px;
-	font-size: 120%;
+	color: #448aff;
 	display: block;
+	font-size: 160%;
+	margin: auto;
+	padding: 10px;
+	position: absolute;
 	text-align: center;
 	text-decoration: none;
+	transition: all .1s ease-in;
 }
 
 .start .button-getstarted:active {
-	background: #2196f3;
 	box-shadow: 0 0 5px rgba(0,0,0,0.3);
+	opacity: 0.9;
+	transform: scale(0.98, 0.98);
 }

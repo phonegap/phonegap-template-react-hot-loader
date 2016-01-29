@@ -20,15 +20,13 @@ const Step = React.createClass({
 			'button': true,
 			'button-next': true,
 			'button-disabled': currentStep >= availableSteps,
-      'hidden': currentStep === totalSteps
+			'hidden': currentStep === totalSteps
 		});
-    console.log(currentStep);
+		const style = {
+			background: `url(/images/step-${currentStep}.jpg) no-repeat center center fixed; background-size: cover;`
+		};
 		return (
-			<div className='step'
-          style={{
-            background:
-            `url(/images/step-${currentStep}.jpg) no-repeat center center fixed; background-size: cover;`
-          }}>
+			<div className='step' style={style}>
 				<Tappable className='button button-previous' onTap={this.prev}/>
 				<Tappable className={nextClass} onTap={this.next}/>
 			</div>

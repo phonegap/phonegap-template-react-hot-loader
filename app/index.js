@@ -26,20 +26,22 @@ const App = React.createClass({
 		const { currentStep, availableSteps, totalSteps } = this.state;
 		return currentStep === 0
 			? <Start key="start" />
-			: <Step
-        key={'step-' + currentStep}
+			: <Step key={'step-' + currentStep}
 				currentStep={currentStep}
 				availableSteps={availableSteps}
 				totalSteps={totalSteps} />;
 	},
 	render () {
-    const { direction } = this.state;
+		const transitionName = this.state.direction === 'next' ? 'step' : 'step-prev';
 		return (
 			<div>
-        <CSSTransitionGroup transitionName={direction === 'next' ? 'step' : 'step-prev'}
-            transitionEnterTimeout={500} transitionLeaveTimeout={500}>
-				{this.renderCurrentStep()}
-        </CSSTransitionGroup>
+				<CSSTransitionGroup
+					transitionName={transitionName}
+					transitionEnterTimeout={500}
+					transitionLeaveTimeout={500}
+					>
+					{this.renderCurrentStep()}
+				</CSSTransitionGroup>
 			</div>
 		);
 	},
