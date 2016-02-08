@@ -1,0 +1,31 @@
+.hello-message {
+	position: absolute;
+	display: block;
+	font-size: 120%;
+	top: 100px;
+	right: 50%;
+	-webkit-transform: translate(50%,0);
+	transform: translate(50%,0);
+	-webkit-appearance: none;
+	color: #222222;
+	width: 300px;
+	text-align: center;
+}
+
+.fade-message-enter {
+	opacity: 0.01;
+}
+
+.fade-message-enter.fade-message-enter-active {
+	opacity: 1;
+	transition: opacity 300ms ease-in;
+}
+
+.fade-message-leave {
+	opacity: 1;
+}
+
+.fade-message-leave.fade-message-leave-active {
+	opacity: 0.01;
+	transition: opacity 300ms ease-in;
+}

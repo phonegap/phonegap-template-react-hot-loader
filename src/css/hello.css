@@ -1,0 +1,33 @@
+.hello {
+	position: absolute;
+	top: 20px;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.hello .button-say-hello {
+	position: absolute;
+	display: block;
+	font-size: 120%;
+	bottom: 100px;
+	right: 50%;
+	-webkit-transform: translate(50%,0);
+	transform: translate(50%,0);
+	-webkit-appearance: none;
+	border-radius: 2px;
+	background: #efefef;
+	color: #222222;
+	padding: 10px;
+	width: 300px;
+	text-align: center;
+	text-decoration: none;
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.hello .button-say-hello.Tappable-active {
+	background: #dddddd;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	-webkit-transform: translate(50%, 1px);
+	transform: translate(50%, 1px);
+}

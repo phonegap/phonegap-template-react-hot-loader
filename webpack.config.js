@@ -4,7 +4,7 @@ const webpack = require('webpack');
 
 const ENV = require('./env');
 const PATHS = {
-	app: path.join(__dirname, 'app'),
+	app: path.join(__dirname, 'src'),
 	build: path.join(__dirname, 'www'),
 };
 

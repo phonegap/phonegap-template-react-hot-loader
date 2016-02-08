@@ -9,7 +9,7 @@ const config = path.resolve('./config.xml');
 try {
 	replace({
 		regex: /<content +src="[^"]+\" *\/>/,
-		replacement: "<content src=\""+src+"\"/>",
+		replacement: '<content src="' + src + '" />',
 		paths: [config],
 		silent: true,
 	});
