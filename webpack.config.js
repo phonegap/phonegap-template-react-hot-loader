@@ -4,14 +4,14 @@ const webpack = require('webpack');
 
 const ENV = require('./env');
 const PATHS = {
-	app: path.join(__dirname, 'src'),
+	src: path.join(__dirname, 'src'),
 	build: path.join(__dirname, 'www'),
 };
 
 process.env.BABEL_ENV = ENV;
 
 const common = {
-	entry: PATHS.app,
+	entry: PATHS.src,
 	output: {
 		path: PATHS.build,
 		filename: 'bundle.js',
@@ -20,13 +20,13 @@ const common = {
 		loaders: [
 			{
 				test: /\.css$/,
-				loaders: ['style', 'css'],
-				include: PATHS.app,
+				loaders: ['style', 'css?url=false'],
+				include: PATHS.src,
 			},
 			{
 				test: /\.jsx?$/,
-				loaders: ['babel?cacheDirectory'],
-				include: PATHS.app,
+				loader: 'babel?cacheDirectory',
+				include: PATHS.src,
 			}
 		]
 	}
