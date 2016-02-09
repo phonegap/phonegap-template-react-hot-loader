@@ -7,11 +7,9 @@
 	<author email="support@phonegap.com" href="https://github.com/JedWatson">
 		Jed Watson and the PhoneGap Team
 	</author>
-	<content src="http://localhost:8080/index.html"/>
 	<preference name="permissions" value="none" />
 	<preference name="orientation" value="default" />
 	<preference name="target-device" value="universal" />
-	<preference name="fullscreen" value="true" />
 	<preference name="DisallowOverscroll" value="true" />
 	<preference name="detect-data-types" value="true" />
 	<preference name="android-minSdkVersion" value="14" />
@@ -24,9 +22,11 @@
 	<allow-intent href="mailto:*" />
 	<allow-intent href="geo:*" />
 	<platform name="android">
+		<content src="index.html" />
 		<allow-intent href="market:*" />
 	</platform>
 	<platform name="ios">
+		<content src="index.html" />
 		<allow-intent href="itms:*" />
 		<allow-intent href="itms-apps:*" />
 	</platform>

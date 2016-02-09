@@ -20,6 +20,7 @@
   "devDependencies": {
     "babel-preset-react-hmre": "^1.0.1",
     "css-loader": "^0.23.1",
+    "elementtree": "^0.1.6",
     "replace": "^0.3.0",
     "style-loader": "^0.13.0",
     "webpack-merge": "^0.7.3"
@@ -29,7 +30,7 @@
     "ios": "cordova run ios",
     "prepare": "node config && webpack && cordova prepare",
     "build": "node config && webpack && cordova build",
-    "start": "node config && webpack-dev-server",
+    "start": "node config && HOST=0.0.0.0 webpack-dev-server",
     "test": "echo \"No tests (yet!) -- submit a PR?\" && exit 0"
   },
   "author": "Jed Watson",

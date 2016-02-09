@@ -17,7 +17,7 @@
 	-webkit-appearance: none;
 	border-radius: 2px;
 	background: #efefef;
-	color: #222222;
+	color: #666666;
 	padding: 10px;
 	width: 300px;
 	text-align: center;
@@ -26,7 +26,8 @@
 }
 
 .hello .button-say-hello.Tappable-active {
-	background: #dddddd;
+	background: #e6e6e6;
+	color: #333333;
 	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 	-webkit-transform: translate(50%, 1px);
 	transform: translate(50%, 1px);
