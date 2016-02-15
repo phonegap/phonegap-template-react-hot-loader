@@ -13,7 +13,7 @@ To use this template, you'll need Node.js v4 or newer.
 To use this as a template, use Cordova 6.0.0+ and create a new project:
 
 ```
-cordova create MyAppName --template=phonegap-template-react-hmr
+cordova create MyAppName --template=phonegap-template-react-hot-loader
 ```
 
 ```
@@ -37,10 +37,18 @@ You can then open the app in your browser by visiting [localhost:8080](http://lo
 Open it in the iOS Simulator by running (in another terminal):
 
 ```
+cordova platform add ios
+```
+
+```
 npm run ios
 ```
 
 Or in the Android emulator with:
+
+```
+cordova platform add android
+```
 
 ```
 npm run android
