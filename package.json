@@ -1,9 +1,12 @@
 {
   "name": "phonegap-template-react-hot-loader",
   "version": "1.0.0",
-  "description": "Template Example for using React, ES2015, Webpack, and hot loading in a PhoneGap App",
+  "description": "PhoneGap Template using React, ES2015, Webpack, and hot module reloading",
   "main": "src/index.js",
-  "repository": "https://github.com/PhoneGap/phonegap-template-react-hot-loader.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonegap/phonegap-template-react-hot-loader.git"
+  },
   "dependencies": {
     "babel-core": "^6.4.5",
     "babel-loader": "^6.2.1",
@@ -33,6 +36,16 @@
     "start": "node config && HOST=0.0.0.0 webpack-dev-server",
     "test": "echo \"No tests (yet!) -- submit a PR?\" && exit 0"
   },
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template"
+  ],
+  "bugs": {
+    "url": "https://github.com/phonegap/phonegap-template-react-hot-loader/issues"
+  },
+  "homepage": "https://github.com/phonegap/phonegap-template-react-hot-loader#readme",
   "author": "Jed Watson",
   "contributors": [
     {
