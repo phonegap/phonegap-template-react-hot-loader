@@ -51,6 +51,10 @@
     {
       "name": "Tommy-Carlos Williams",
       "email": "tommy@devgeeks.org"
+    },
+    {
+      "name": "Jed Watson",
+      "email": "jed.watson@me.com"
     }
   ],
   "license": "MIT"

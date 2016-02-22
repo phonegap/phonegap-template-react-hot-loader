@@ -16,6 +16,14 @@ To use this as a template, use Cordova 6.0.0+ and create a new project:
 cordova create MyAppName --template=phonegap-template-react-hot-loader
 ```
 
+or
+
+```
+phonegap create MyAppName --template react-hot-loader
+```
+
+then
+
 ```
 cd MyAppName
 ```
