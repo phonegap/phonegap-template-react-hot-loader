@@ -7,38 +7,38 @@ import Message from './Message';
 
 const Hello = React.createClass({
 
-	displayName: 'Hello',
+  displayName: 'Hello',
 
-	getInitialState: function() {
-		return {
-			message: '',
-		};
-	},
+  getInitialState() {
+    return {
+      message: '',
+    };
+  },
 
-	sayHello(msg) {
-		// CSSTransitionGroup will fade this in
-		this.setState({
-			message: msg
-		});
-		setTimeout(() => {
-			// CSSTransitionGroup will now fade this out
-			this.setState({
-				message: '',
-			});
-		}, 2000);
-	},
+  sayHello(msg) {
+    // CSSTransitionGroup will fade this in
+    this.setState({
+      message: msg,
+    });
+    setTimeout(() => {
+      // CSSTransitionGroup will now fade this out
+      this.setState({
+        message: '',
+      });
+    }, 2000);
+  },
 
-	render: function() {
-		return (
-			<div className="hello">
-				<Message message={ this.state.message } />
-				<Tappable
-					className="button-say-hello"
-					onTap={ () => this.sayHello('Hello world') }
-				>Say hello</Tappable>
-			</div>
-		);
-	},
+  render() {
+    return (
+      <div className="hello">
+        <Message message={this.state.message} />
+        <Tappable
+          className="button-say-hello"
+          onTap={() => this.sayHello('Hello world')}
+        >Say hello</Tappable>
+      </div>
+    );
+  },
 });
 
 module.exports = Hello;
