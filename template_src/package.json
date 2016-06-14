@@ -1,0 +1,61 @@
+{
+  "name": "phonegap-template-react-hot-loader",
+  "version": "1.1.1",
+  "description": "PhoneGap Template using React, ES2015, Webpack, and hot module reloading",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonegap/phonegap-template-react-hot-loader.git"
+  },
+  "dependencies": {
+    "babel-core": "^6.4.5",
+    "babel-loader": "^6.2.1",
+    "babel-preset-es2015": "^6.3.13",
+    "babel-preset-react": "^6.3.13",
+    "classnames": "^2.2.3",
+    "react": "^0.14.6",
+    "react-addons-css-transition-group": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-tappable": "^0.8.0",
+    "webpack": "^1.12.12",
+    "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "babel-preset-react-hmre": "^1.0.1",
+    "css-loader": "^0.23.1",
+    "elementtree": "^0.1.6",
+    "replace": "^0.3.0",
+    "style-loader": "^0.13.0",
+    "webpack-merge": "^0.7.3"
+  },
+  "scripts": {
+    "android": "cordova run android",
+    "ios": "cordova run ios",
+    "prepare": "node config && webpack && cordova prepare",
+    "build": "node config && webpack && cordova build",
+    "start": "node config && HOST=0.0.0.0 webpack-dev-server",
+    "test": "echo \"No tests (yet!) -- submit a PR?\" && exit 0"
+  },
+  "keywords": [
+    "ecosystem:phonegap",
+    "ecosystem:cordova",
+    "cordova:template",
+    "phonegap:template"
+  ],
+  "bugs": {
+    "url": "https://github.com/phonegap/phonegap-template-react-hot-loader/issues"
+  },
+  "homepage": "https://github.com/phonegap/phonegap-template-react-hot-loader#readme",
+  "author": "Jed Watson",
+  "contributors": [
+    {
+      "name": "Tommy-Carlos Williams",
+      "email": "tommy@devgeeks.org"
+    },
+    {
+      "name": "Jed Watson",
+      "email": "jed.watson@me.com"
+    }
+  ],
+  "license": "MIT"
+}
