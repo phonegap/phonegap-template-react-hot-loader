@@ -1,6 +1,6 @@
 {
   "name": "phonegap-template-react-hot-loader",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "PhoneGap Template using React, ES2015, Webpack, and hot module reloading",
   "main": "index.js",
   "keywords": [
