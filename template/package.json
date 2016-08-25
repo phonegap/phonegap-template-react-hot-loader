@@ -21,14 +21,15 @@
     "elementtree": "^0.1.6",
     "replace": "^0.3.0",
     "style-loader": "^0.13.0",
-    "webpack-merge": "^0.7.3"
+    "webpack-merge": "^0.7.3",
+    "cross-env": "^2.0.0"
   },
   "scripts": {
     "android": "cordova run android",
     "ios": "cordova run ios",
     "prepare": "node config && webpack && cordova prepare",
     "build": "node config && webpack && cordova build",
-    "start": "node config && HOST=0.0.0.0 webpack-dev-server",
+    "start": "node config && cross-env HOST=0.0.0.0 webpack-dev-server",
     "test": "echo \"No tests (yet!) -- submit a PR?\" && exit 0"
   },
   "keywords": [],
