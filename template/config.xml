@@ -113,6 +113,4 @@
     <allow-intent href="itms-apps:*" />
     <allow-navigation href="http://*/*" />
   </platform>
-  <plugin name="cordova-plugin-whitelist" version="1" />
-  <plugin name="cordova-plugin-statusbar" spec="~2.1.0" />
 </widget>
