@@ -1,7 +1,7 @@
 {
   "presets": [
 	["latest", {
-	"es2015": {
+	"es2017": {
 	"loose": true
 	}
   }],
