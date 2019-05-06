@@ -1,7 +1,16 @@
 {
   "presets": [
-    "react",
-    "es2015"
+	["latest", {
+	"es2017": {
+	"loose": true
+	}
+  }],
+  "react",
+	"stage-0"
+	],
+  "plugins": [
+	"transform-runtime",
+	"transform-async-to-generator"
   ],
   "env": {
     "development": {

@@ -16,6 +16,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "devDependencies": {
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-react-hmre": "^1.0.1",
     "css-loader": "^0.23.1",
     "elementtree": "^0.1.6",
